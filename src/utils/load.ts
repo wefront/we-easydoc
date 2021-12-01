@@ -41,7 +41,7 @@ function useAjaxGetData<T>(path: string, resolve: (t: T) => void, reject: (t: T)
       }
       // 目前所有数据都是json字符串所以在此统一处理，将来可能会存在数据类型隐患
       return resolve(JSON.parse(result))
-    } catch (error: any) {
+    } catch (error) {
       return reject(error)
     }
   }

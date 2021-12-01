@@ -1,5 +1,5 @@
 {
-  "name": "EasyDoc",
+  "name": "we-easydoc",
   "version": "2.2.0",
   "description": "项目文档系统",
   "author": "李运通、杨毅臻、胡宁、焦传锴、权明扬、黄丹丹",
@@ -18,12 +18,12 @@
     "publish": "npm run build && npm publish"
   },
   "repository": {
-    "url": "",
+    "url": "https://github.com/wefront/we-easydoc.git",
     "type": "git"
   },
   "main": "lib/index.js",
   "keywords": [
-    "easy-doc",
+    "EasyDoc",
     "document"
   ],
   "files": [
