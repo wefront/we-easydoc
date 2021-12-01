@@ -1,0 +1,120 @@
+[
+  {
+    "name": "操作手册A36",
+    "auth": "dev",
+    "description": "这是关于操作手册A的描述这是关于操作手册A的描述这是关于操作手册A的描述这是关于操作手册A的描述这是关于操作手册A的描述这是关于操作手册A的描述这是关于操作手册A的描述这是关于操作手册A的描述这是关于操作手册A的描述",
+    "initUrl": "/easy-doc/example/test-doc.html",
+    "steps": [
+      {
+        "initUrl": "/easy-doc/example/test-doc.html",
+        "description": "<a href='/easy-doc/example/test-page.html'>go page</a>   操作手册A第一步有两个按钮高亮",
+        "nodes": [
+          {
+            "docId": "dept-open-btn1",
+            "description": "<a href='/easy-doc/example/test-manual.html'>9876543<a>操作手册A第一步节点1",
+            "auth": "dev"
+          },
+          {
+            "docId": "dept-open-btn2",
+            "description": "操作手册A第一步节点2222",
+            "auth": "dev",
+            "zIndex": 123
+          }
+        ]
+      },
+      {
+        "url": "/easy-doc/example/test-doc.html",
+        "description": "操作手册A第二步有两个按钮高亮",
+        "nodes": [
+          {
+            "docId": "dept-open-btn3",
+            "description": "操作手册A第二步节点1",
+            "auth": "dev"
+          },
+          {
+            "docId": "dept-open-btn4",
+            "description": "操作手册A第二步节点2",
+            "auth": "dev"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "操作手册B",
+    "auth": "dev",
+    "description": "这是关于操作手册B的描述",
+    "initUrl": "/easy-doc/example/test-manual.html",
+    "steps": [
+      {
+        "url": "/easy-doc/example/test-manual.html",
+        "description": "操作手册B第一步有两个按钮高亮",
+        "nodes": [
+          {
+            "docId": "dept-open-btn1",
+            "description": "操作手册B第一步节点1",
+            "auth": "PRODUCTION"
+          },
+          {
+            "docId": "dept-open-btn2",
+            "description": "操作手册B第一步节点2",
+            "auth": "PRODUCTION"
+          }
+        ]
+      },
+      {
+        "url": "/easy-doc/example/test-manual.html",
+        "description": "操作手册B第2步有两个按钮高亮",
+        "nodes": [
+          {
+            "docId": "dept-open-btn1",
+            "description": "操作手册B第2步节点3333",
+            "auth": "PRODUCTION"
+          },
+          {
+            "docId": "dept-open-btn2",
+            "description": "操作手册B第2步节点44444",
+            "auth": "PRODUCTION"
+          }
+        ]
+      },
+      {
+        "description": "跳到：操作手册A36",
+        "linkManualName": "操作手册A36",
+        "type": "link"
+      },
+      {
+        "url": "/easy-doc/example/test-manual.html",
+        "description": "操作手册B第一步有两个按钮高亮",
+        "nodes": [
+          {
+            "docId": "dept-open-btn1",
+            "description": "操作手册B第一步节点1",
+            "auth": "PRODUCTION"
+          },
+          {
+            "docId": "dept-open-btn2",
+            "description": "操作手册B第一步节点2",
+            "auth": "PRODUCTION"
+          }
+        ]
+      },
+      {
+        "url": "/easy-doc/example/test-manual.html",
+        "description": "操作手册B第一步有两个按钮高亮",
+        "nodes": [
+          {
+            "docId": "dept-open-btn1",
+            "description": "操作手册B第一步节点1",
+            "auth": "PRODUCTION"
+          },
+          {
+            "docId": "dept-open-btn2",
+            "description": "操作手册B第一步节点2",
+            "auth": "PRODUCTION"
+          }
+        ]
+      }
+    ]
+  }
+]

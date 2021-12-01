@@ -1,0 +1,322 @@
+[
+  {
+    "name": "应用接入",
+    "auth": "test",
+    "initUrl": "/appaccess/",
+    "description": "网关后台操作手册",
+    "steps": [
+      {
+        "url": "/appaccess/",
+        "description": "新增应用",
+        "nodes": [
+          {
+            "docId": "appaccess-add",
+            "auth": "test",
+            "description": "点击新增应用"
+          }
+        ]
+      },
+      {
+        "url": "/appaccess/",
+        "description": "输入应用明细信息",
+        "nodes": [
+          {
+            "docId": "appaccess-add-detail",
+            "auth": "test",
+            "description": "输入应用明细信息",
+            "direction": "TC"
+          }
+        ]
+      },
+      {
+        "url": "/appaccess/",
+        "description": "选择你需要操作的应用",
+        "nodes": [
+          {
+            "docId": "appaccess-form-app",
+            "auth": "test",
+            "description": "选择应用",
+            "direction": "BC"
+          },
+          {
+            "docId": "appaccess-form-domain",
+            "auth": "test",
+            "description": "输入域名",
+            "direction": "BC"
+          }
+        ]
+      },
+      {
+        "url": "/appaccess/",
+        "description": "对目标应用进行接入配置",
+        "nodes": [
+          {
+            "docId": "appaccess-config",
+            "auth": "test",
+            "description": "对目标应用进行接入配置<br/>弹出明细接入配置"
+          }
+        ]
+      },
+      {
+        "url": "/appaccess/",
+        "description": "接入明细配置",
+        "nodes": [
+          {
+            "docId": "appaccess-upstream-config",
+            "auth": "test",
+            "description": "不可与已有名称重复"
+          },
+          {
+            "docId": "appaccess-nextStep",
+            "auth": "test",
+            "description": "配置完成后续所有配置项即可"
+          }
+        ]
+      },
+      {
+        "linkManualName": "上游服务配置",
+        "description": "继续下一操作手册：<a href='/upstreams'>上游服务</a>"
+      }
+    ]
+  },
+  {
+    "name": "上游服务配置",
+    "auth": "test",
+    "initUrl": "/upstreams",
+    "description": "上游服务配置操作手册",
+    "steps": [
+      {
+        "url": "/upstreams/",
+        "description": "搜索目标应用",
+        "nodes": [
+          {
+            "docId": "upstreams-nav",
+            "auth": "test",
+            "description": "输入对应信息进行查询",
+            "direction": "BC"
+          }
+        ]
+      },
+      {
+        "url": "/upstreams/",
+        "description": "查看上游服务对应信息",
+        "nodes": [
+          {
+            "docId": "upstreams-detail",
+            "auth": "test",
+            "description": "点击查看详情",
+            "direction": "LC"
+          },
+          {
+            "docId": "upstreams-route",
+            "auth": "test",
+            "description": "展示关联路由",
+            "direction": "TC"
+          },
+          {
+            "docId": "upstreams-node",
+            "auth": "test",
+            "description": "管理节点",
+            "direction": "BL"
+          }
+        ]
+      },
+      {
+        "url": "/upstreams/",
+        "description": "修改详情",
+        "nodes": [
+          {
+            "docId": "upstreams-modify",
+            "auth": "test",
+            "description": "点击弹出修改详情弹窗"
+          }
+        ]
+      },
+      {
+        "url": "/upstreams/",
+        "description": "详情页面",
+        "nodes": [
+          {
+            "docId": "upstreams-modify-checkType",
+            "auth": "test",
+            "description": "检查类型为http时需要输入路径",
+            "direction": "BC"
+          },
+          {
+            "docId": "upstreams-modify-httpStatuses",
+            "auth": "test",
+            "description": "输入状态码后按回车增加",
+            "direction": "BC"
+          }
+        ]
+      },
+      {
+        "linkManualName": "路由操作配置",
+        "description": "继续下一操作手册：<a href='/routes'>路由操作</a>"
+      }
+    ]
+  },
+  {
+    "name": "路由操作配置",
+    "auth": "test",
+    "initUrl": "/routes",
+    "description": "路由操作配置手册",
+    "steps": [
+      {
+        "url": "/routes/",
+        "description": "新增路由",
+        "nodes": [
+          {
+            "docId": "route-add",
+            "auth": "test",
+            "description": "点击弹出新增窗口",
+            "direction": "LC"
+          }
+        ]
+      },
+      {
+        "url": "/routes/",
+        "description": "创建路由信息",
+        "nodes": [
+          {
+            "docId": "route-add-steps",
+            "auth": "test",
+            "description": "完成三步信息填写创建路由"
+          }
+        ]
+      },
+      {
+        "url": "/routes/",
+        "description": "详情页面",
+        "nodes": [
+          {
+            "docId": "route-detail",
+            "auth": "test",
+            "description": "点击弹出详情弹窗",
+            "direction": "LC"
+          },
+          {
+            "docId": "route-upstream",
+            "auth": "test",
+            "description": "点击查看当前路由关联上游服务",
+            "direction": "BL"
+          },
+          {
+            "docId": "route-modify",
+            "auth": "test",
+            "description": "点击修改路由详情",
+            "direction": "TC"
+          }
+        ]
+      },
+      {
+        "linkManualName": "插件操作配置",
+        "description": "继续下一操作手册：<a href='/plugins/list'>插件</a>"
+      }
+    ]
+  },
+  {
+    "name": "插件操作配置",
+    "auth": "test",
+    "initUrl": "/plugins/list",
+    "description": "插件操作配置手册",
+    "steps": [
+      {
+        "url": "/plugins/list",
+        "description": "新增插件",
+        "nodes": [
+          {
+            "docId": "plugin-add",
+            "auth": "test",
+            "description": "新增插件"
+          }
+        ]
+      },
+      {
+        "url": "/plugins/list",
+        "description": "编辑插件",
+        "nodes": [
+          {
+            "docId": "plugin-modify",
+            "auth": "test",
+            "description": "修改插件名与描述"
+          }
+        ]
+      },
+      {
+        "url": "/plugins/rules",
+        "description": "打开<a href='/plugins/rules'>插件规则列表页面</a>，点击新增插件弹出弹窗",
+        "nodes": [
+          {
+            "docId": "plugin-rule-add",
+            "auth": "test",
+            "description": "点击弹出新增弹框"
+          }
+        ]
+      },
+      {
+        "url": "/plugins/rules",
+        "description": "编辑规则详情",
+        "nodes": [
+          {
+            "docId": "plugin-rule-bind",
+            "auth": "test",
+            "description": "勾选后域名与请求路径和路由绑定"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "限流配置",
+    "auth": "test",
+    "initUrl": "/plugins/rateLimit",
+    "description": "根据用户权限，管理已有限流配置信息。用户只能管理自己应用的限流信息。（对于本地化流量网关，因无法通过WCP进行应用权限校验，所以不做应用权限验证，用户需自行确保只对自己的应用做限流配置！）限流的配置都是实时生效的，可以通过“关闭”、“开启”按钮迅速的启用或停止限流功能。",
+    "steps": [
+      {
+        "url": "/plugins/rateLimit",
+        "description": "选择应用名称，以拉取对应域名。（对于接入api-gateway-web的应用选择业务网关对应域名）",
+        "nodes": [
+          {
+            "docId": "rateLimit-navform-host",
+            "auth": "test",
+            "description": "选择应用名称，以拉取选择对应域名, 再进行查询",
+            "direction": "BC"
+          }
+        ]
+      },
+      {
+        "url": "/plugins/rateLimit",
+        "description": "新增应用限流配置",
+        "nodes": [
+          {
+            "docId": "rateLimit-add",
+            "auth": "test",
+            "description": "点击新增"
+          }
+        ]
+      },
+      {
+        "url": "/plugins/rateLimit",
+        "description": "配置限流规则表单项",
+        "nodes": [
+          {
+            "docId": "rateLimit-dimension",
+            "auth": "test",
+            "description": "限流维度控制不同维度的配置对应项"
+          },
+          {
+            "docId": "rateLimit-isPreciseMatch",
+            "auth": "test",
+            "description": "'无'：表示不对某个页面或接口限流。新增后不可修改！"
+          },
+          {
+            "docId": "rateLimit-returnMsgType",
+            "auth": "test",
+            "description": "选择自定义后用户可以自定义不同格式限流返回内容"
+          }
+        ]
+      }
+    ]
+  }
+]

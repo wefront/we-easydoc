@@ -1,0 +1,213 @@
+.easydoc-panel {
+  position: fixed;
+  top: 50px;
+  left: calc(100% + 1px);
+  z-index: 99999;
+  will-change: auto;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  &:hover {
+    left: calc(100% - 335px);
+  }
+  &.show {
+    left: calc(100% - 335px);
+  }
+  a {
+    color: #ff9100;
+    text-decoration: underline;
+    &:hover {
+      color: #ff6600;
+    }
+  }
+  .easydoc-panel_content {
+    position: relative;
+    width: @main-width;
+    padding-bottom: 10px;
+    color: #fff;
+    box-sizing: border-box;
+    opacity: 0.85;
+    background: linear-gradient(360deg, #ff9100, #ff6600);
+    box-shadow: 0px 2px 4px 0px rgba(255, 169, 63, 0.39);
+    cursor: pointer;
+    .easydoc-panel_tag {
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 20px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 20px 0 0px 20px;
+      background: #ff6600;
+      box-shadow: -4px 1px 5px 0px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.4s;
+      &--tip {
+        width: 100px;
+        left: -100px;
+      }
+      &-tip {
+        display: inline-block;
+      }
+      #ED-Tag_icon {
+        text-align: center;
+        font-size: 18px;
+        animation: finger infinite 2s;
+        vertical-align: middle;
+      }
+    }
+    .title {
+      position: relative;
+      display: block;
+      width: 100%;
+      line-height: 26px;
+      padding: 16px 0 6px 24px;
+      font-size: 18px;
+      font-family: PingFang, PingFang-SC;
+      font-weight: 700;
+      text-align: left;
+      color: #fff;
+      z-index: 99;
+    }
+    #ED-Menu {
+      .easydoc-type {
+        position: relative;
+        width: 80%;
+        line-height: 20px;
+        box-sizing: border-box;
+        padding: 4px 0 4px 8px;
+        padding-left: 30px;
+        margin: 6px 0 6px 16px;
+        font-size: 14px;
+        font-family: PingFangSC, PingFangSC-Regular;
+        font-weight: 400;
+        color: #fff;
+        line-height: 20px;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 1px solid transparent;
+        &:hover,
+        &.active {
+          width: 80%;
+          border: 1px solid #ffffff;
+          border-radius: 14px;
+          background: rgba(255, 255, 255, 0.1);
+        }
+        &__icon {
+          position: absolute;
+          left: 6px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 20px;
+          vertical-align: bottom;
+        }
+        select {
+          color: #fff;
+          background: transparent;
+          border: none;
+          outline: none;
+          option {
+            background: #ffaa36;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+  #ED-Btn {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    z-index: 1001;
+    background: linear-gradient(360deg, #ff9100, #ff6600);
+    opacity: 0.85;
+    .easydoc-panel_lock {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 999;
+      transition: all 0.2s;
+      display: flex;
+      padding: 10px 12px;
+      &:hover {
+        // transform: scale(1);
+      }
+      &.active {
+        .easy-doc_lock {
+          display: block;
+        }
+        .easy-doc_unlock1 {
+          display: none;
+        }
+      }
+      .easy-doc_lock {
+        display: none;
+      }
+      .easy-doc_unlock1 {
+        display: block;
+      }
+      .panelLockDesc {
+        padding: 3px 0 0 3px;
+        font-size: 12px;
+      }
+    }
+    .easydoc-panel_setting {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 999;
+      transition: all 0.2s;
+      padding: 6px 0;
+    }
+  }
+}
+@keyframes finger {
+  0% {
+    transform: translate(-1px);
+  }
+
+  25% {
+    transform: translate(1.5px);
+  }
+
+  50% {
+    transform: translate(-1px);
+  }
+
+  75% {
+    transform: translate(1.5px);
+  }
+
+  100% {
+    transform: translate(-1px);
+  }
+}
+
+@keyframes scaleDraw {
+  0% {
+    transform: scale(1); /*开始为原始大小*/
+  }
+  25% {
+    transform: scale(1.1); /*放大1.1倍*/
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "match": "/dashboard",
+    "jsonFile": "/easy-doc/dashboard.json"
+  },
+  {
+    "match": "/upstreams",
+    "jsonFile": "/easy-doc/upstreams.json"
+  },
+  {
+    "match": "/plugins/.+",
+    "jsonFile": "/easy-doc/plugins.json"
+  }
+]

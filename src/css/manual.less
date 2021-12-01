@@ -1,0 +1,152 @@
+.easydoc-manual {
+  &__catalogues {
+    box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 4px 18px 50px;
+    z-index: 1000;
+    animation: showSteps 0.2s ease-in-out alternate;
+    overflow: auto;
+    .mainTitle {
+      font-size: 16px;
+      margin: 10px 0 10px 0;
+      text-align: left;
+    }
+    .subTitle {
+      font-size: 14px;
+      line-height: 1.4em;
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+      // font-weight: normal;
+    }
+    .easydoc-manual__list {
+      margin-top: 20px;
+    }
+    &--out {
+      animation: outSteps 0.2s ease-in-out forwards;
+    }
+  }
+  &__steps {
+    box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 4px 18px 50px;
+    z-index: 1000;
+    animation: showSteps 0.2s ease-in-out alternate;
+    overflow: auto;
+    position: relative;
+    .easydoc-manual_BackButton {
+      font-size: 20px;
+      color: #999;
+      // float: left;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      cursor: pointer;
+      &:hover {
+        color: #ff7920;
+      }
+    }
+    .mainTitle {
+      font-size: 16px;
+      margin: 10px 0 10px 0;
+      text-align: center;
+    }
+    .subTitle {
+      font-size: 12px;
+      color: #999;
+      line-height: 1.4em;
+      text-align: center;
+      font-weight: normal;
+    }
+    &--out {
+      animation: outSteps 0.2s ease-in-out forwards;
+    }
+  }
+  &__list {
+    margin-top: 30px;
+  }
+  &__step {
+    position: relative;
+    padding: 12px;
+    border: 1px solid #c3c3c3;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.4s;
+    &:hover {
+      border-color: @main-color;
+      // background-color: rgba(255, 79, 20, 0.05);
+      .easydoc-manual__icon {
+        color: @main-color;
+      }
+    }
+    &.easydoc-manual__step--active {
+      border-color: @main-color;
+      background-color: rgba(255, 79, 20, 0.05);
+      .easydoc-manual__icon {
+        color: @main-color;
+      }
+    }
+    & + & {
+      margin-top: 12px;
+    }
+    .title {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: normal;
+      color: @font-color;
+    }
+    .desc {
+      font-size: 13px;
+      line-height: 1.4;
+      color: @subfont-color;
+      margin: 0;
+      margin-top: 10px;
+    }
+  }
+  &__icon {
+    font-size: 26px;
+    color: #666;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    transform: translateY(-50%);
+    transition: color 0.4s;
+  }
+}
+
+#ED-Step {
+  display: flex;
+  height: 0;
+  min-height: 40px;
+  width: @main-width;
+  overflow: hidden;
+  box-sizing: content-box;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes showSteps {
+  0% {
+    margin-left: 100%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes outSteps {
+  0% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+}

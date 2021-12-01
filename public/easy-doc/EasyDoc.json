@@ -1,0 +1,18 @@
+[
+  {
+    "match": "/easy-doc/example/test-doc.html",
+    "jsonFile": "/easy-doc/public/easy-doc/test-doc.json"
+  },
+  {
+    "match": "/easy-doc/example/test-page.html",
+    "jsonFile": "/easy-doc/public/easy-doc/test-page.json"
+  },
+  {
+    "match": "/easy-doc/example/test-edit.html",
+    "jsonFile": "/easy-doc/public/easy-doc/test-edit.json"
+  },
+  {
+    "match": "/easy-doc/example/test-manual.html",
+    "jsonFile": "/easy-doc/public/easy-doc/test-manual.json"
+  }
+]

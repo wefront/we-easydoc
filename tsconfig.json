@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "es6",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": false,
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["es6", "dom", "dom.iterable", "esnext", "scripthost"]
+  },
+  "include": [
+    "src",
+    "__tests__",
+    "./types/images.d.ts" //文件路径
+  ]
+}

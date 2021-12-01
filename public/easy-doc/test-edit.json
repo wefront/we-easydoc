@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "name": "page doc1",
+      "description": "水电费水电费水电费",
+      "auth": "dev"
+    },
+    {
+      "name": "page doc2",
+      "description": "水电费水电费水电费22222",
+      "auth": "dev"
+    }
+  ],
+  "docs": [
+    {
+      "docId": "dept-open-btn1",
+      "description": "方方速递速速递速速递速递对",
+      "auth": "dev",
+      "direction": "LT"
+    },
+    {
+      "docId": "dept-open-btn2",
+      "description": "方方速递速速递速速递速递对，一个按按钮方速递对，一个按按钮方速递对，一个按按钮方速递对，一个按按钮方速递对，",
+      "auth": "dev",
+      "direction": "BR"
+    },
+    {
+      "docId": "dept-open-btn3",
+      "description": "测试多个测试多个测试多个测试多个测试多个测试多测试多个测试多个测试多个测试多个测试多个测试多个个",
+      "auth": "dev",
+      "direction": "BR"
+    },
+    {
+      "docId": "dept-open-btn4",
+      "description": "11111",
+      "auth": "dev",
+      "direction": "BR"
+    }
+  ],
+  "edits": [
+    {
+      "docId": "dept-open-btn6",
+      "editUrl": "https://juejin.cn/team/6932676282429898766/posts",
+      "auth": "dev",
+      "direction": "TL"
+    }
+  ]
+}
