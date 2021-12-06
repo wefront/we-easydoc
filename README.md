@@ -132,7 +132,8 @@ npm i we-easydoc --save
 
 ```javascript
 // 使用默认参数
-import EasyDoc from 'easy-doc'
+import EasyDoc from 'we-easydoc'
+import 'we-easydoc/lib/index.css'
 EasyDoc.init()
 
 // 自定义参数
