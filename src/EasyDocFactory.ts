@@ -31,6 +31,8 @@ class EasyDocFactory {
 
   public static hasProjectsJSON = LoadConfig.hasProjectsJSON
 
+  public static EasyDocDocumentUrl: string | boolean = LoadConfig.EasyDocDocumentUrl
+
   public static urlPrefix = LoadConfig.urlPrefix
 
   public static showGuideMask = LoadConfig.showGuideMask
@@ -81,6 +83,10 @@ class EasyDocFactory {
     if (opt.hasProjectsJSON !== undefined) {
       EasyDocFactory.hasProjectsJSON = opt.hasProjectsJSON
     }
+    if (opt.EasyDocDocumentUrl !== undefined) {
+      EasyDocFactory.EasyDocDocumentUrl = opt.EasyDocDocumentUrl
+    }
+
     if (opt.urlPrefix) {
       EasyDocFactory.urlPrefix = opt.urlPrefix
     }

@@ -14,7 +14,7 @@
           <use xlink:href="#easy-doc_double-arrow-left"></use>
         </svg>
       </div>
-      <a class="title" target="_blank" href="https://juejin.cn/team/6932676282429898766/posts"> Easy-Doc </a>
+      <div class="title" :style="EasyDocDocumentUrlStyle" @click="goEasyDocDocument">Easy-Doc</div>
       <div class="ed-menu">
         <div
           :class="{ 'easydoc-type': true, active: documentActive === item.type }"
@@ -314,8 +314,22 @@ export default {
       writeCurrentManualCache()
       // writeCurrentGuideCache()
     },
+    goEasyDocDocument() {
+      if (EasyDocFactory.EasyDocDocumentUrl !== false) {
+        window.open(EasyDocFactory.EasyDocDocumentUrl)
+      }
+    },
   },
   computed: {
+    EasyDocDocumentUrlStyle() {
+      if (EasyDocFactory.EasyDocDocumentUrl !== false) {
+        return {
+          textDecoration: 'underline',
+        }
+      } else {
+        return {}
+      }
+    },
     documentTypesFilter() {
       const modules = Object.keys(this.documents)
       return this.documentTypes.filter((item) => modules.some((it) => it === item.type))
@@ -349,7 +363,7 @@ export default {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-  transition: left .3s linear;
+  transition: left 0.3s linear;
   &:hover {
     left: calc(100% - 335px);
   }

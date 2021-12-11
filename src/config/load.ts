@@ -8,4 +8,5 @@ export default {
   hasEasyDocJSON: true,
   hasManualsJSON: true,
   hasProjectsJSON: true,
+  EasyDocDocumentUrl: 'https://juejin.cn/post/7038328726546808863',
 }

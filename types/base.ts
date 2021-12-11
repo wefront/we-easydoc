@@ -153,6 +153,7 @@ export interface EasyDocOption {
   hasEasyDocJSON?: boolean
   hasManualsJSON?: boolean
   hasProjectsJSON?: boolean
+  EasyDocDocumentUrl?: string | boolean
 }
 
 export type Node = PageNode | DocNode | EditNode | ManualNode | GuideNode

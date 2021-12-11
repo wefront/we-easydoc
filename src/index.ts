@@ -35,6 +35,8 @@ class EasyDoc {
 
   public static hasProjectsJSON = EasyDocFactory.hasProjectsJSON
 
+  public static EasyDocDocumentUrl = EasyDocFactory.EasyDocDocumentUrl
+
   public static init(opt: EasyDocOption = {}): void {
     EasyDocFactory.init(opt)
   }

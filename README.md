@@ -167,7 +167,7 @@ EasyDoc.init({
 | hasEasyDocJSON   | boolean                    | 否  | true                      | 是否请求Easydoc.json文件                          |
 | hasManualsJSON   | boolean                    | 否  | true                      | 是否请求Manuals.json文件                          |
 | hasProjectsJSON  | boolean                    | 否  | true                      | 是否请求Projects.json文件                         |
-
+| EasyDocDocumentUrl | string \| boolean | 否 | 'https://juejin.cn/post/7038328726546808863' | 面板EasyDoc文字跳转URL; 写false表示不跳转  |
 
 -   env 参数扩展讲解
     -   'dev' 或 'DEVELOPMENT' 表示生产环境、测试环境、开发环境可见所有文档
