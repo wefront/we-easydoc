@@ -9,6 +9,11 @@ export default class HandleUIService {
   public renderGuideDom = (data: panelTypesData): void => {
     // 操作面板的渲染依赖于当前URL的JSON文件说明
     if (!data) return
+    // 删除已有easydoc节点，一个不在预期内的issues问题
+    const edLow = document.getElementById('ED-Menu')
+    if (edLow) {
+      edLow.remove()
+    }
     const ed = document.createElement('div')
     ed.id = 'ED-Menu'
     ed.appendChild(
